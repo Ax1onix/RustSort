@@ -20,21 +20,44 @@ fn main()
     {
         numbers[i] = read_input();
     }
-
-    for _i in 0..numbers.len()
+    println!("Please type the mode of sorting:\n 1. Sort min - max\n 2. Sort max-min");
+    let mut choic:u16 = read_input() as u16;
+    if choic == 1 
     {
-        let mut boxy = 0;
-        for x in 0..numbers.len()-1
+        for _i in 0..numbers.len()
         {
-            if numbers[x]>numbers[x+1]
+            let mut boxy = 0;
+            for x in 0..numbers.len()-1
             {
-                boxy = numbers[x];
-                numbers[x] = numbers[x+1];
-                numbers[x+1] = boxy;
+               if numbers[x]>numbers[x+1]
+                {
+                    boxy = numbers[x];
+                    numbers[x] = numbers[x+1];
+                    numbers[x+1] = boxy;
+               }
             }
         }
     }
-
+    else if choic == 2
+    {
+        for _i in 0..numbers.len()
+        {
+            let mut boxy = 0;
+            for x in 0..numbers.len()-1
+            {
+                if numbers[x]<numbers[x+1]
+                {
+                    boxy = numbers[x+1];
+                    numbers[x+1] = numbers[x];
+                    numbers[x] = boxy;
+                }
+            }
+        }
+    }
+    else
+    {
+        println!("THAT WASN`T A CHOICE, SHWEINHUND!")
+    }
     for i in 0..numbers.len()
     {
         print!(" {}",numbers[i]);
