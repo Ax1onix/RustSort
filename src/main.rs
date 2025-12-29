@@ -53,7 +53,7 @@ fn main()
                 {
                     boxy = numbers[x+1];
                     numbers[x+1] = numbers[x];
-                    numbers[x] = boxy;
+                    numbers[x] = boxy; boly = 1;
                 }
             }
             if boly == 0 {
