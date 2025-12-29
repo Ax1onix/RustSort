@@ -24,7 +24,7 @@ fn main()
     let mut choic:u16 = read_input() as u16;
     if choic == 1 
     {
-        for _i in 0..numbers.len()
+        for i in 0..numbers.len()
         {
             let mut boxy = 0;
             for x in 0..numbers.len()-i-1
@@ -40,7 +40,7 @@ fn main()
     }
     else if choic == 2
     {
-        for _i in 0..numbers.len()
+        for i in 0..numbers.len()
         {
             let mut boxy = 0;
             for x in 0..numbers.len()-i-1
