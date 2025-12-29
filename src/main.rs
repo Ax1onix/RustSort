@@ -24,9 +24,9 @@ fn main()
     let mut choic:u16 = read_input() as u16;
     if choic == 1 
     {
-        for _i in 0..numbers.len()
+        'outer:for _i in 0..numbers.len()
         {
-            let mut boxy = 0;
+            let mut boxy = 0; let mut boly = 0;
             for x in 0..numbers.len()-1
             {
                if numbers[x]>numbers[x+1]
@@ -34,15 +34,19 @@ fn main()
                     boxy = numbers[x];
                     numbers[x] = numbers[x+1];
                     numbers[x+1] = boxy;
+                    boly = 1;
                }
+            }
+            if boly == 0 {
+                break 'outer;
             }
         }
     }
     else if choic == 2
     {
-        for _i in 0..numbers.len()
+        'outer: for _i in 0..numbers.len()
         {
-            let mut boxy = 0;
+            let mut boxy = 0; let mut boly = 0;
             for x in 0..numbers.len()-1
             {
                 if numbers[x]<numbers[x+1]
@@ -51,6 +55,9 @@ fn main()
                     numbers[x+1] = numbers[x];
                     numbers[x] = boxy;
                 }
+            }
+            if boly == 0 {
+                break  'outer;
             }
         }
     }
