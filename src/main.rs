@@ -27,7 +27,7 @@ fn main()
         for _i in 0..numbers.len()
         {
             let mut boxy = 0;
-            for x in 0..numbers.len()-1
+            for x in 0..numbers.len()-i-1
             {
                if numbers[x]>numbers[x+1]
                 {
@@ -43,7 +43,7 @@ fn main()
         for _i in 0..numbers.len()
         {
             let mut boxy = 0;
-            for x in 0..numbers.len()-1
+            for x in 0..numbers.len()-i-1
             {
                 if numbers[x]<numbers[x+1]
                 {
