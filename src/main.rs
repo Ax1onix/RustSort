@@ -1,11 +1,11 @@
-mod bsort;
-mod binsrch;
+mod bsort;   //Importin
+mod binsrch; //      All the neccessary libraries
 
 fn main()
 {
     println!("Bin Search or Bubble Sort?\n  1 = BubbleSort; 2 = BinSearch");
     
-    let x = bsort::read::function();
+    let x = bsort::read::function();  // Reading the input of your choice
     match x 
     {
         1=>bsort::function(),
